@@ -11,7 +11,9 @@ export default function MovieCast() {
   const { movieId } = useParams();
 
     useEffect(() => {
+
     if (!movieId === null) return;
+
     async function getCastInfo() {
       try {
         setIsLoading(true);
@@ -20,8 +22,10 @@ export default function MovieCast() {
           throw new Error("Sorry, no information about cast");
         }
         setCast(dataCast);
+
       } catch (error) {
         setError(error.message);
+        
       } finally {
         setIsLoading(false);
       }
@@ -41,7 +45,7 @@ export default function MovieCast() {
             cast.map(({ id, original_name, profile_path, character }) => {
               return (
                 <li className={css.listitem} key={id}>
-                  <img src={profile_path} alt={original_name} />
+                  <img className={css.photo} src={profile_path} alt={original_name} />
                   <p className={css.name}>{original_name}</p>
                   <p className={css.text}>{character}</p>
                 </li>

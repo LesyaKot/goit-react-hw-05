@@ -12,6 +12,7 @@ export default function MovieReviews() {
   const { movieId } = useParams();
 
   useEffect(() => {
+
     if (!movieId) return;
 
     async function getReviews() {
@@ -23,8 +24,10 @@ export default function MovieReviews() {
           throw new Error("Sorry, we have no reviews for this movie");
         }
         setReviews(data);
+
       } catch (error) {
         setError(error.message);
+        
       } finally {
         setIsLoading(false);
       }

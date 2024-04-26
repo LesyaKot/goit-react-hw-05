@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { getMovieByQuery } from "../../moviesApi";
-
 import MovieList from "../../components/MovieList/MovieList";
 import SearchForm from "../../components/SearchForm/SearchForm";
 import Loader from '../../components/Loader/Loader'
@@ -26,8 +25,10 @@ export default function MoviesPage() {
           throw new Error("Sorry, we don't have such movies");
         }
         setMovies(data);
+
       } catch (error) {
         setError(error.message);
+        
       } finally {
         setIsLoading(false);
       }

@@ -15,7 +15,8 @@ export default function Loader({ isLoading }) {
           height={80}
           width={80}
           // color="#4fa94d"
-          color="rgb(244, 249, 94)"
+          // color="rgb(244, 249, 94)"
+          color="#1d3c57"
           ariaLabel="oval-loading"
           wrapperStyle={{}}
           wrapperClass=""

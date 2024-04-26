@@ -1,6 +1,8 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import "../../moviesApi";
 import css from "./MovieCard.module.css";
+import Loader from "../Loader/Loader";
+import { Suspense } from "react";
 
 export default function MovieCard({ movieDetails }) {
   const {
@@ -13,9 +15,10 @@ export default function MovieCard({ movieDetails }) {
   } = movieDetails;
 
   const location = useLocation();
-  const from = location.state?.from ?? "/";
-  const getGenres = (array) => {
-    return array.map((el) => el.name).join(", ");
+  const from = location.state?.from ?? "/movies";
+
+  const getGenres = (items) => {
+    return items.map((item) => item.name).join(", ");
   };
 
   return (
@@ -49,8 +52,10 @@ export default function MovieCard({ movieDetails }) {
           </Link>
         </div>
       </div>
-
-      <Outlet />
+      
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 }

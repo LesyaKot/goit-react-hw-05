@@ -1,61 +1,57 @@
-.wrapper{
-display: flex;
-flex-direction: row;
-justify-content: center;
-gap: 24px;
-padding: 12px;
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  padding: 12px;
+}
+.poster{
+  border: 2px solid #fff;
+}
+.textwrap {
+  width: 500px;
 }
 
-.posterwrap{
-  
+.title {
+  margin-bottom: 20px;
 }
-.textwrap{
-    width: 500px;
-  }
-
-.title{
-    margin-bottom: 20px;
+.score {
+  margin-bottom: 12px;
 }
-.score{
-    margin-bottom: 12px;
+.overviewtitle {
+  margin-bottom: 12px;
 }
-.overviewtitle{
-    margin-bottom: 12px;
-}
-.overviewtext{
-    margin-bottom: 12px;
+.overviewtext {
+  margin-bottom: 12px;
 }
 
-.genretitle{
-    margin-bottom: 12px;
+.genretitle {
+  margin-bottom: 12px;
 }
 
-.genretext{
-    margin-bottom: 12px;
+.genretext {
+  margin-bottom: 12px;
 }
 
-
-
-.additionalwrap{
-
-    padding-top: 24px;
-    padding-top: 24px;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    justify-content: flex-start;
-    align-items: flex-start;
+.additionalwrap {
+  padding-top: 24px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-.additionaltitle{
-    margin-bottom: 12px;
+.additionaltitle {
+  margin-bottom: 12px;
 }
-.addtext{
-    margin-bottom: 12px;
+.addtext {
+  margin-bottom: 12px;
 }
-.addwrap{
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    justify-content: flex-start;
-    align-items: flex-start; 
+.addwrap {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
